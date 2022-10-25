@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import AboutPage from "./page/AboutPage";
 import MainPage from "./page/MainPage";
-import Todo from "./component/Todo";
+import Todo from "./page/Todo";
 
 function App() {
   return (

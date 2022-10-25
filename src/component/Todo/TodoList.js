@@ -19,16 +19,26 @@ function TodoList() {
     }, []);
 
     const goRead = (id) => {
-        // history.push(`/todo/read/${id}`)
-        console.log(history)
+        history.push(`/todo/read/${id}`)
+    }
+
+    const goInput = () => {
+        history.push(`/todo/input`)
     }
 
     return (
-        <div>
-            <ul>
-                {todos?.map(({id, title}) => <li key={id} onClick={() => goRead(id)}> {id} ----- {title} </li>)}
-            </ul>
-        </div>
+        <>
+            <div>
+                <ul>
+                    {todos?.map(({id, title}) => <li key={id} onClick={() =>
+                        goRead(id)}> {id} ----- {title} </li>
+                    )}
+                </ul>
+            </div>
+            <div>
+                <button onClick={goInput}>INPUT</button>
+            </div>
+        </>
     );
 }
 

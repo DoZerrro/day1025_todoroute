@@ -11,12 +11,12 @@ const todoSlice = createSlice({
             console.log("changeRefresh.............")
             state.refresh = !state.refresh
         },
-        getTargetId: (state, action) => {
+        setTargetId: (state, action) => {
             console.log("getTargetId : ", state.targetId)
             state.targetId = action.payload
         }
     }
 })
 
-export const {changeRefresh, getTargetId} = todoSlice.actions
+export const {changeRefresh, setTargetId} = todoSlice.actions
 export default todoSlice.reducer

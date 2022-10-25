@@ -5,16 +5,13 @@ function Layout(prop) {
     return (
         <div>
             <div>
-                <h1>HEADER</h1>
-                <Link to={'/about'}>ABOUT</Link> <br/>
-                <Link to={'/main'}>MAIN</Link> <br/>
-                <Link to={'/todo/'}>TODO</Link>
+                <Link to={'/about'}>ABOUT</Link> &nbsp; &nbsp;
+                <Link to={'/main'}>MAIN</Link> &nbsp; &nbsp;
+                <Link to={'/todo'}>TODO</Link>
             </div>
+            <hr/>
             <div>
                 {prop.children}
-            </div>
-            <div>
-                <h1>FOOTER</h1>
             </div>
         </div>
     );
