@@ -40,6 +40,14 @@ function TodoRead() {
         })
     }
 
+    const updateClick = (id) => {
+        history.push(`/todo/mod/${id}`)
+    }
+
+    const listClick = () => {
+        history.push(`/todo/list`)
+    }
+
 
     return (
         <>
@@ -50,6 +58,12 @@ function TodoRead() {
             </div>
             <div>
                 <button onClick={() => {clickHandler(todo.id)}}>DELETE</button>
+            </div>
+            <div>
+                <button onClick={() => {updateClick(todo.id)}}>UPDATE</button>
+            </div>
+            <div>
+                <button onClick={() => {listClick()}}>LIST</button>
             </div>
         </>
     );

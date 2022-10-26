@@ -9,12 +9,14 @@ import {
 import TodoListPage from "./TodoListPage";
 import TodoReadPage from "./TodoReadPage";
 import TodoInputPage from "./TodoInputPage";
+import TodoModPage from "./TodoModPage";
 
 function Index() {
     return (
             <Switch>
                 <Route path={'/todo/list'} component={TodoListPage}/>
                 <Route path={'/todo/input'} component={TodoInputPage}/>
+                <Route path={'/todo/mod/:id'} component={TodoModPage}/>
                 <Route path={'/todo/read/:id'} component={TodoReadPage}/>
                 <Route path={'/todo'}>
                     <Redirect to={'/todo/list'}/>
